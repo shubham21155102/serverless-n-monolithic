@@ -1,0 +1,14 @@
+service: starter
+frameworkVersion: '3'
+
+provider: 
+  name: aws
+  runtime: nodejs18.X
+  region: ap-south-1
+functions:
+  api: 
+   handler: hello.handler
+   events:
+    - httpApi: 
+       path: /
+       method: get
